@@ -15,6 +15,14 @@ Then, separate regression models can be trained for each group. For example, a f
 The grain of the dataset is one row per store, month, promotion, and product category. For example, one row can represent Store A, January, Flat Discount, TV category with total items sold.
 Before modelling, transaction data should be aggregated to calculate total items sold and summary features like average customer metrics and event indicators for each row.
 
+(b) Before building the model, I would perform EDA to understand data quality, patterns, and relationships. I would check missing values, outliers, and consistency in the dataset.
+1.	Promotion Type vs Items Sold (Boxplot or Bar Chart): We check which promotions lead to higher sales and how consistent they are. This helps in selecting important features and possibly creating interaction features between promotion and location.
+2.	Month vs Items Sold (Line Plot): We look for seasonality patterns such as higher sales in certain months. This helps in creating time-based features or seasonal indicators.
+3.	Location Type vs Items Sold (Boxplot): We analyze how sales differ across urban, semi-urban, and rural stores. This can justify grouping stores or adding interaction features with promotion type.
+4.	Product Category vs Items Sold (Bar Chart): We examine which categories sell more and how they respond to promotions. This helps in creating category-level features and improving model accuracy.
+
+
+
 
 
 
