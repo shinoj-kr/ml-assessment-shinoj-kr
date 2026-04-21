@@ -10,6 +10,13 @@ This is a Supervised Learning regression problem, as we are predicting a continu
 (c) A single global model may not perform well because stores in different locations can respond differently to the same promotion. An alternative approach is to group similar stores based on factors like location, customer demographics, and sales patterns using business logic or clustering.
 Then, separate regression models can be trained for each group. For example, a flat discount may work better in urban stores, while a buy-one-get-one (BOGO) offer may be more effective in rural stores for the same product. This approach captures group-specific behaviour and leads to more accurate predictions and better promotion decisions.
 
+### B2. Data and EDA Strategy
+(a) The tables can be joined using Store_ID and Date, where transactions are linked with store attributes using Store_ID, and with promotion and calendar data using Date.
+The grain of the dataset is one row per store, month, promotion, and product category. For example, one row can represent Store A, January, Flat Discount, TV category with total items sold.
+Before modelling, transaction data should be aggregated to calculate total items sold and summary features like average customer metrics and event indicators for each row.
+
+
+
 
 
 
