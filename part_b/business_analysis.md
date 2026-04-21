@@ -21,6 +21,10 @@ Before modelling, transaction data should be aggregated to calculate total items
 3.	Location Type vs Items Sold (Boxplot): We analyze how sales differ across urban, semi-urban, and rural stores. This can justify grouping stores or adding interaction features with promotion type.
 4.	Product Category vs Items Sold (Bar Chart): We examine which categories sell more and how they respond to promotions. This helps in creating category-level features and improving model accuracy.
 
+(c) Since 80% of the transactions have no promotion, the model may become biased and mostly learn patterns for non-promotion cases, ignoring how promotions actually impact sales.
+To handle this, we can use resampling techniques. For example, if we have 800 no-promotion and 200 promotion records, we can either reduce no-promotion data to 200 (under sampling) or increase promotion data to 800 (oversampling) to balance the dataset. This helps the model learn the true effect of promotions more accurately.
+ 
+
 
 
 
