@@ -5,3 +5,8 @@
 
 This is a Supervised Learning regression problem, as we are predicting a continuous value. This approach is justified because the business goal is to maximise sales by selecting the best promotion, which requires predicting the number of items sold under different conditions. Features like product category, seasonality, events, and customer demographics help capture real-world demand patterns.
 
+(b) Items sold (sales volume) is a more reliable target because it directly reflects customer demand, while price and discount act as influencing factors captured in the input features. Revenue can be misleading due to price fluctuations, but items sold clearly shows how demand changes across different promotions. This also illustrates that the target variable should be closely aligned with the business objective, which in this case is selecting the most effective promotion for each store. Choosing items sold ensures the model directly supports this decision by identifying which promotion leads to higher sales, whereas a poorly chosen target could result in incorrect promotion strategies despite good model performance.
+
+(c) 
+
+
