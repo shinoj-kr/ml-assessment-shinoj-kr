@@ -23,7 +23,12 @@ Before modelling, transaction data should be aggregated to calculate total items
 
 (c) Since 80% of the transactions have no promotion, the model may become biased and mostly learn patterns for non-promotion cases, ignoring how promotions actually impact sales.
 To handle this, we can use resampling techniques. For example, if we have 800 no-promotion and 200 promotion records, we can either reduce no-promotion data to 200 (under sampling) or increase promotion data to 800 (oversampling) to balance the dataset. This helps the model learn the true effect of promotions more accurately.
+
+### B3. Model Evaluation and Deployment
+ (a) Since the data is time-based (monthly over three years), I would use a time-based split by training the model on earlier periods and testing on later periods (for example, train on the first 2.5 years and test on the last 6 months). A random split is inappropriate because it can mix past and future data, leading to data leakage.
  
+I would use evaluation metrics like RMSE and MAE to measure prediction accuracy. RMSE helps penalize large errors, while MAE provides an easily interpretable average error. I would also consider MAPE or weighted MAE to reflect business impact, especially for high-sales stores or key product categories, ensuring the model supports better promotion decisions.
+
 
 
 
