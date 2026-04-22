@@ -33,6 +33,12 @@ I would use evaluation metrics like RMSE and MAE to measure prediction accuracy.
 
 In contrast, during low-demand periods, features like Avg_Income_Level and Customer_Segment become more important, showing higher price sensitivity among certain groups. This leads to recommendations like flat discounts to stimulate demand. I would explain to the marketing team that loyalty bonuses are suggested during peak periods to maximize long-term customer value, while discounts are used during slower periods to drive immediate sales.
 
+(c) The trained model needs to generate promotion recommendations at the start of every month for all 50 stores without being retrained each time. After training once, the model is saved (for example as a .pkl file) so it can be reused.
+
+Each month, new data for all stores is prepared in the same format as the training data, including features like location, product category, promotion options (such as discount, BOGO, or loyalty points), events, and customer details. This new data is not used for training but is passed as input to the saved model to generate predictions (items sold) for different promotion options.
+
+For each store, the model predicts the number of items sold for each possible promotion. These predictions are then compared, and the promotion that gives the highest predicted sales is selected for that specific store and month. The model’s performance is monitored over time using metrics like RMSE or MAE, and it is retrained only when performance drops due to changes in trends or customer behavior.
+
 
 
 
