@@ -29,6 +29,12 @@ To handle this, we can use resampling techniques. For example, if we have 800 no
  
 I would use evaluation metrics like RMSE and MAE to measure prediction accuracy. RMSE helps penalize large errors, while MAE provides an easily interpretable average error. I would also consider MAPE or weighted MAE to reflect business impact, especially for high-sales stores or key product categories, ensuring the model supports better promotion decisions.
 
+(b) Feature importance can show that during high-demand periods (like festive seasons), factors such as Month and Event_Type dominate, indicating strong natural demand across customer segments. In such cases, promotions like loyalty bonuses are preferred because customers are already willing to spend, and the goal is to retain them and encourage repeat purchases rather than reduce prices.
+
+In contrast, during low-demand periods, features like Avg_Income_Level and Customer_Segment become more important, showing higher price sensitivity among certain groups. This leads to recommendations like flat discounts to stimulate demand. I would explain to the marketing team that loyalty bonuses are suggested during peak periods to maximize long-term customer value, while discounts are used during slower periods to drive immediate sales.
+
+
+
 
 
 
